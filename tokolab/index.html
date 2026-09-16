@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TokoLab - Praktikum Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>TokoLab</h1>
+      <p>Praktikum Web — Digital Business Technology</p>
+    </div>
+    <button class="btn-guide">Tampilkan panduan</button>
+  </header>
+
+  <p class="subtitle-banner">Inilah hasil akhir yang harus kalian bangun.</p>
+
+  <main class="container">
+    <section class="catalog-section">
+      <h2 class="section-title">KATALOG PRODUK</h2>
+
+      <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="Cari nama produk..." />
+        <select id="categorySelect">
+          <option value="Semua">Semua Kategori</option>
+          <option value="Aksesoris">Aksesoris</option>
+          <option value="Audio">Audio</option>
+          <option value="Penyimpanan">Penyimpanan</option>
+          <option value="Display">Display</option>
+        </select>
+        <select id="sortSelect">
+          <option value="default">Urutkan: Default</option>
+          <option value="asc">Harga: Termurah</option>
+          <option value="desc">Harga: Termahal</option>
+        </select>
+      </div>
+
+      <div class="product-counter" id="productCounter">9 produk ditampilkan dari total 9</div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <aside class="cart-card">
+      <h2 class="section-title">KERANJANG</h2>
+
+      <div id="cartContent">
+        <p class="empty-cart-msg">Keranjang masih kosong.</p>
+      </div>
+
+      <div class="free-shipping-box">
+        <p class="free-shipping-text" id="shippingText">Belanja Rp300.000 lagi untuk gratis ongkir.</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <div class="voucher-section">
+        <input type="text" id="voucherInput" placeholder="Kode voucher" />
+        <button class="btn-voucher" id="btnVoucher">Pakai</button>
+      </div>
+
+      <div class="summary-line">
+        <span>Subtotal</span>
+        <span id="subtotalVal">Rp0</span>
+      </div>
+      <div class="summary-line">
+        <span>Diskon</span>
+        <span id="discountVal">-Rp0</span>
+      </div>
+      <div class="summary-line">
+        <span>Ongkir</span>
+        <span id="shippingVal">Gratis</span>
+      </div>
+
+      <div class="summary-total">
+        <span>Total</span>
+        <span id="totalVal">Rp0</span>
+      </div>
+
+      <button class="btn-checkout" id="btnCheckout" disabled>Checkout</button>
+      <div class="alert-success" id="checkoutAlert"></div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
